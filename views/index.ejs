@@ -6,10 +6,12 @@
   </head>
   <body>
     <h1>To Do List</h1>
+    <!-- check if todo array length is 0 -->
     <% if (todos.length === 0) { %>
     <h3>There are no To Dos Yet</h3>
     <% } %>
     <ul>
+      <!-- iterate through todo array and items as bulletins and add adjacent delete button -->
       <% todos.forEach(function(t, idx) { %>
       <li>
         <form
@@ -17,7 +19,7 @@
           method="POST"
           class="delete-form"
         >
-          <button type="submit">X</button>
+          <button type="submit">DELETE</button>
         </form>
         <a href="/todos/<%= idx %>"><%= t.todo %></a>
         - <%= t.done ? 'done' : 'not done' %>
