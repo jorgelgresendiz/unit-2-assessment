@@ -26,6 +26,9 @@
       </li>
       <% }); %>
     </ul>
-    <input type="text" /><button>ADD TO DO</button>
+    <hr>
+    <form action="/todos" method="POST" autocomplete="off">
+      <input type="text" name="todo">
+      <button type="submit">Add To Do</button>
   </body>
 </html>

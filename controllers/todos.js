@@ -15,10 +15,10 @@ function index(req, res) {
 function create(req, res) {
   req.body.done = false;
   Todo.create(req.body);
-  res.render("/");
+  res.redirect("/todos");
 }
 
 function deleteTodo(req, res) {
   Todo.deleteOne(req.params.id);
-  res.render("/");
+  res.redirect("/todos");
 }
